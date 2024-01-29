@@ -175,7 +175,7 @@ nav{
     padding-left: 20px;
 }
 .featured-text-card span{
-    background: var(--third-color);
+    background: var(--text-color-second);
     color: var(--color-white);
     padding: 3px 8px;
     font-size: 12px;
