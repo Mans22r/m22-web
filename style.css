@@ -320,9 +320,10 @@ h3{
     border-radius: 20px;
 }
 .about-info p{
-    text-align: center;
+    text-align: justify;
     font-size: 15px;
     color: #777;
+    margin-bottom: 15px;
 }
 .about-btn button{
     position: absolute;
