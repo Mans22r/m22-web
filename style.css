@@ -192,6 +192,7 @@ nav{
     color: var(--text-color-third);
 }
 .featured-text-info{
+    text-align: justify;
     font-size: 15px;
     margin-bottom: 30px;
     color: var(--text-color-second);
