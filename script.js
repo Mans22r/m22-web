@@ -1,11 +1,17 @@
 function myMenuFunction() {
   const menuBtn = document.getElementById("myNavMenu");
 
-  if (menuBtn.className === "nav-menu") {
-    menuBtn.className += " responsive";
-  } else {
-    menuBtn.className = "nav-menu";
-  }
+  menuBtn.classList.toggle("responsive");
+  document.body.classList.toggle("menu-open", menuBtn.classList.contains("responsive"));
+}
+
+function closeMobileMenu() {
+  const menuBtn = document.getElementById("myNavMenu");
+
+  if (!menuBtn) return;
+
+  menuBtn.classList.remove("responsive");
+  document.body.classList.remove("menu-open");
 }
 
 window.onscroll = function () {
@@ -97,6 +103,16 @@ function scrollActive() {
 }
 
 window.addEventListener("scroll", scrollActive);
+
+document.querySelectorAll(".nav-menu a, .footer-menu a, .scroll-btn").forEach((link) => {
+  link.addEventListener("click", closeMobileMenu);
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 900) {
+    closeMobileMenu();
+  }
+});
 
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
